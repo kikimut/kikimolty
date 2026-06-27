@@ -1,0 +1,23 @@
+[Unit]
+Description=Twitch Drops Miner (headless CLI)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=%i
+WorkingDirectory=/opt/twitchdropsminer
+EnvironmentFile=-/etc/default/twitchdropsminer
+ExecStart=/opt/twitchdropsminer/run_headless.sh
+Restart=always
+RestartSec=15
+KillSignal=SIGINT
+TimeoutStopSec=30
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=full
+ProtectHome=read-only
+ReadWritePaths=/opt/twitchdropsminer
+
+[Install]
+WantedBy=multi-user.target

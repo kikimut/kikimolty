@@ -1,0 +1,59 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Run Current File",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Run App (CALL)",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "main.py",
+            "args": ["-vvv"],
+            "console": "integratedTerminal",
+            "justMyCode": false
+        },
+        {
+            "name": "Run App (DUMP)",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "main.py",
+            "args": ["--dump"],
+            "console": "integratedTerminal",
+            "justMyCode": false
+        },
+        {
+            "name": "Run App (DEBUG+WS)",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "main.py",
+            "args": ["-vvv", "--debug-ws"],
+            "console": "integratedTerminal",
+            "justMyCode": false
+        },
+        {
+            "name": "Run App (DEBUG+GQL)",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "main.py",
+            "args": ["-vvv", "--debug-gql"],
+            "console": "integratedTerminal",
+            "justMyCode": false
+        },
+        {
+            "name": "Debug GUI",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "gui.py",
+            "console": "integratedTerminal",
+            "justMyCode": false
+        },
+    ]
+}
